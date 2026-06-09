@@ -28,7 +28,7 @@
 ;; along with this program.  If not, see <http://www.gnu.org/licenses/>.
 
 ;;; Commentary:
-;;
+
 ;; Speed-type allows you to practice your touch typing skills.  You can
 ;; test yourself by typing snippets from online books or use any piece
 ;; of text or code you have in Emacs.  Speed-type keeps track of your
@@ -95,7 +95,7 @@ When undo is disabled this behaves like `progn'."
   :type 'integer)
 
 (defcustom speed-type-text-picker-tolerance 20
-  "Char-count allowed to exceed MAX if text-picker would cut of word otherwise."
+  "Char-count allowed to exceed MAX if text-picker would cut off word otherwise."
   :type 'integer)
 
 (defcustom speed-type-pause-delay-seconds 5
@@ -269,7 +269,7 @@ status value)."
 (defcustom speed-type-add-extra-words-on-error 0
   "How many new words should be added on error.
 When 0 or less, no words are added. The typing-session will only
-be complete when these extra words are typed too. Recommanded is
+be complete when these extra words are typed too. Recommended is
 something between 1 and 7.
 
 Similar to `speed-type-add-extra-words-on-non-consecutive-errors'
@@ -655,7 +655,7 @@ Expects to be called from `point-min' in a speed-type statistic file."
     0))
 
 (defun speed-type--maybe-insert-newline ()
-  "Move last closing parantheses to own line if not already.
+  "Move last closing parentheses to own line if not already.
 
 We use `pp' to write the buffer state to the statistic-file.
 Since `pp' works a bit differently on EMACS 30.1 for some
@@ -692,7 +692,7 @@ CODING is the symbol of the coding-system in which the file is encoded."
       (setq coding 'utf-8-emacs))
   (insert
    (format
-    ";;;; Emacs Speed-type statisitic Format Version %d\
+    ";;;; Emacs Speed-type statistic Format Version %d\
 ;;;; -*- coding: %S; mode: lisp-data -*-\n"
     speed-type-file-format-version (coding-system-base coding)))
   (insert ";;; This format is meant to be slightly human-readable;\n"
